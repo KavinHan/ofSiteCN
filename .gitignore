@@ -3,3 +3,5 @@ _site
 *.pyc
 .DS_Store
 _filters/asciidoc_template
+buildAndSync.sh
+rsync.sh

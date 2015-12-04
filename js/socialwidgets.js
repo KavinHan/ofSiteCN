@@ -58,8 +58,8 @@ function feedForumLoaded(result) {
     // Grab the container we will put the results into
     var container = document.getElementById("forum");
     container.innerHTML = '<h3>forum</h3>';
-    
-    
+
+
 
     // Loop through the feeds, putting the titles onto the page.
     // Check out the result object for a list of properties returned in each entry.
@@ -106,7 +106,7 @@ function feedFlickrLoaded(result) {
       a.href = entry.link;
       aText.href = entry.link;
       aText.className="flickrTitle";
-      //entry.title + 
+      //entry.title +
       h3.appendChild(document.createTextNode(Encoder.htmlDecode(" by " + entry.author.substr(entry.author.indexOf('(')+1, entry.author.indexOf(')')-entry.author.indexOf('(')-1))))
       a.appendChild(img);
       a.className  = "img";
@@ -126,11 +126,11 @@ function feedFlickrLoaded(result) {
 
 // Our callback function, for when a feed is loaded.
 function feedVimeoLoaded(result) {
-  if (!result.error && result.xmlDocument.getElementsByTagName('item').length>0) {
+  if (!result.error && result.xmlDocument.getElementsByTagName('item').length>0 && document.getElementById("vimeo")) {
     // Grab the container we will put the results into
     var container = document.getElementById("vimeo");
     container.innerHTML = '';
-    var numEntry = Math.floor(Math.random()*result.xmlDocument.getElementsByTagName('item').length)
+    var numEntry = Math.floor(Math.random()*result.xmlDocument.getElementsByTagName('item').length);
     var entry = result.xmlDocument.getElementsByTagName('item')[numEntry];
     var url = entry.getElementsByTagName("link")[0].textContent;
     var id = url.substr(url.lastIndexOf("/")+1);

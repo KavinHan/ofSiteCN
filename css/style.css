@@ -1,4 +1,12 @@
-@import url("http://fonts.googleapis.com/css?family=Roboto");
+/*@import url("http://fonts.googleapis.com/css?family=Roboto");*/
+/* latin */
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Questrial'), local('Questrial-Regular'), url('Questrial.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
 html {
 	height: 100%;
 }
@@ -498,7 +506,7 @@ a.nohover {
 	padding: 8px 0 8px 0;
 	font-size: 1.2em;
 	font-weight: bold;
-		
+
 }
 
 .submenu{
@@ -806,7 +814,7 @@ a.docs_class{
 /* BEGIN unify formatting for markdown ``inline code blocks`` */
 .class_documentation code, .documentation_detail_description code{
   font-size: 12px;
-  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;	
+  font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 }
 /* END unify formatting for markdown ``inline code blocks`` */
 
@@ -841,7 +849,7 @@ a.docs_class{
 #editdocs img {
   border: 1px solid rgba(238, 57, 135, 0.3);
   border-radius: 11px;
-  box-shadow: 2px 2px 2px #eee; 
+  box-shadow: 2px 2px 2px #eee;
 }
 
 #docstitle{
@@ -985,7 +993,7 @@ a.documentation_class_link, a:link.documentation_class_link, a:visited.documenta
 }
 pre {
 	background-color: #fdfde3;
-	font-family: Courier,  monospace; 
+	font-family: Courier,  monospace;
 	line-height: 120%;
 	margin: 0px;
 	margin-left: 10px;
@@ -1095,7 +1103,7 @@ div.galleryItem p {
 	margin: 0;
 }
 #download-latest-platform-last{
-    margin-right:0; 
+    margin-right:0;
 	border-right: none;
 }
 #download-latest-platform-title{

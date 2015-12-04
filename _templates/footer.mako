@@ -1,21 +1,26 @@
 ## -*- coding: utf-8 -*-
-<p id="credits">
 
-Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/openframeworks/ofSite/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
+<style media="screen">
+  .k-footer-p {
+    text-align: center;
+    color: #aaa;
+    font-size: .8rem;
+  }
+  .k-footer-a {
+    text-align: center;
+    color: #EE3987 !important;
+    font-size: .8rem;
+  }
+</style>
+<p id="credits" class="k-footer-p">
+  Last updated ${self.getTime()}&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/KavinHan/ofSiteCN/commit/${self.getLastCommitHash()}">${self.getLastCommitHash()}</a>
+</p>
 
-<!--br/>RSS feeds for <a href="${bf.util.site_path_helper(bf.config.blog.path,'feed')}">Entries</a-->
-
-% if bf.config.blog.disqus.enabled:
- and <a
-href="http://${bf.config.blog.disqus.name}.disqus.com/latest.rss">Comments</a>.
-% endif
-<br/>
-<a href="http://www.rackspace.com" target="_blank" class="rackspace">
-Hosting for openFrameworks is generously provided by Rackspace
-<br/>
-<img src="http://c1776742.cdn.cloudfiles.rackspacecloud.com/images/information/mediacenter/links/130x33_grey.png">
-</a>
-
+<p class="k-footer-p">这里是openframeworks<a class="k-footer-a" href="http://openframeworks.cc">官网</a>的中文版</p>
+<p class="k-footer-p">
+  需要大家的帮助。^^
+  <br />
+  如果你是会英文的oFer，请来<a class="k-footer-a" href="https://github.com/KavinHan/ofSiteCN">这里</a>帮助大家。
 </p>
 
 % if bf.config.blog.disqus.enabled:
@@ -44,12 +49,12 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-var pageTracker = _gat._getTracker("UA-9614675-1");
+var pageTracker = _gat._getTracker("UA-71029288-1");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
 <%def name="getTime()">
-  <% 
+  <%
     from time import gmtime, strftime
     currentTime = strftime("%A, %d %B %Y %H:%M:%S UTC", gmtime())
   %>
@@ -57,7 +62,7 @@ ${currentTime}
 </%def>
 
 <%def name="getLastCommitHash()">
-<% 
+<%
     import subprocess
     p1 = subprocess.Popen(["git", "log", "-1"], stdout=subprocess.PIPE)
     out = p1.communicate()
