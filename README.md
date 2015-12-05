@@ -1,5 +1,10 @@
 # openFrameworks官网的中文版
 
+为了国内用户更好的体验，正在研究怎么定制中文版官网。
+
+敬请期待。。。
+
+
 This repository stores the content and code that generates the [openFrameworks](http://openFrameworks.cc/) website.
 
 ## Setting up the site to build locally
